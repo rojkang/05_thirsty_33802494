@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Survey</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f7ff;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        color: #0055aa;
+        text-align: center;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .category-group {
+        margin-top: 10px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+      button {
+        background-color: #0055aa;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #0077cc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Customer Survey</h1>
+
+    <form action="/survey" method="POST">
+      <!-- Basic Information -->
+      <label for="firstName">First name:</label>
+      <input type="text" id="firstName" name="firstName" required />
+
+      <label for="surname">Surname:</label>
+      <input type="text" id="surname" name="surname" required />
+
+      <label for="email">Email address:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="age">How old are you?</label>
+      <input type="text" id="age" name="age" required />
+
+      <label>Which of the following drinks categories do you like</label>
+      <div class="category-group">
+        <input type="radio" id="beer" name="drinkCategory" value="Beer" required />
+        <label for="beer">Beer</label><br />
+
+        <input type="radio" id="wine" name="drinkCategory" value="Wine" />
+        <label for="wine">Wine</label><br />
+
+        <input type="radio" id="soft" name="drinkCategory" value="Soft Drinks" />
+        <label for="soft">Soft Drinks</label><br />
+
+        <input type="radio" id="other" name="drinkCategory" value="Other" />
+        <label for="other">Other</label>
+      </div>
+
+      <label>Are you a student?</label>
+      <input type="checkbox" id="student" name="student" value="Yes" />
+      <label for="student">Yes</label>
+
+      <button type="submit">Submit Survey</button>
+    </form>
+  </body>
+</html>

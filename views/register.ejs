@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <style>
+      body {
+        background-color: #e3f2fd;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        color: #0d47a1;
+      }
+      form {
+        background-color: #ffffff;
+        border: 2px solid #90caf9;
+        display: inline-block;
+        padding: 25px 40px;
+        border-radius: 15px;
+        text-align: left;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: #1976d2;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      input[type="submit"]:hover {
+        background-color: #0d47a1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Register for the GYD</h1>
+    <form method="POST" action="/registered">
+      <label>First Name:</label>
+      <input id="first" type="text" name="first" required>
+
+      <label>Last Name:</label>
+      <input id="last" type="text" name="last" required>
+
+      <label>Email:</label>
+      <input id="email" type="email" placeholder="email@example.com" required name="email">
+
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>
